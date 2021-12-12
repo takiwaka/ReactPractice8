@@ -1,9 +1,9 @@
+// 前ユーザー一覧を取得するカスタムフック
 import axios from "axios";
 import { useState } from "react";
 import { USerProfile } from "../types/UserProfile";
 import { User } from "../types/api/user";
 
-// 前ユーザー一覧を取得するカスタムフック
 export const useAllUsers = () => {
   const [UserProfiles, setUserProfiles] = useState<Array<USerProfile>>([]);
   const [loading, setLoading] = useState(false);
