@@ -8,9 +8,12 @@ const user = {
   address: "東京"
 };
 
+const onClickGetData = () => {};
+
 export default function App() {
   return (
     <div className="App">
+      <button onClick={onClickGetData}>データ取得</button>
       <UserCard user={user} />
     </div>
   );
