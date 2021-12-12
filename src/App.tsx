@@ -7,7 +7,6 @@ import { USerProfile } from "./types/UserProfile";
 
 export default function App() {
   const [UserProfiles, setUserProfiles] = useState<Array<USerProfile>>([]);
-
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -16,7 +15,7 @@ export default function App() {
     setError(false);
 
     axios
-      .get<Array<User>>("https://jsonplaceholder.typicode.com/users11")
+      .get<Array<User>>("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         const data = res.data.map((user) => ({
           id: user.id,
